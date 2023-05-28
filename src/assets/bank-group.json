@@ -1,0 +1,93 @@
+[
+  {
+    "nmBank": "Banco do Brasil",
+    "cdBank": "1",
+    "cdAgency": "7898",
+    "cdCurrentAcount": "8245",
+    "cdDigitCurrentAcount": "1",
+    "isActive": "S",
+    "domicileGroups": [
+      {
+        "cdCardType": 1,
+        "nmCardType": "Visa",
+        "cdSettlementType": 1,
+        "nmSettlementType": "Debito",
+        "cdDomicileGroup": 20,
+        "isActive": "S",
+        "nmDomicileGroup": "POS-Debito"
+      },
+      {
+        "cdCardType": 1,
+        "nmCardType": "Visa",
+        "cdSettlementType": 2,
+        "nmSettlementType": "Crédito",
+        "cdDomicileGroup": 21,
+        "isActive": "S",
+        "nmDomicileGroup": "POS-Crédito"
+      },
+      {
+        "cdCardType": 2,
+        "nmCardType": "Master",
+        "cdSettlementType": 2,
+        "nmSettlementType": "Crédito",
+        "cdDomicileGroup": 51,
+        "nmDomicileGroup": "Lio-Crédito"
+      },
+      {
+        "cdCardType": 7,
+        "nmCardType": "ELO",
+        "cdSettlementType": 1,
+        "nmSettlementType": "Débito",
+        "cdDomicileGroup": 50,
+        "isActive": "N",
+        "nmDomicileGroup": "Lio-Débito"
+      }
+    ]
+  },
+  {
+    "nmBank": "Banco Bradesco",
+    "cdBank": "267",
+    "cdAgency": "5897",
+    "cdCurrentAcount": "9878",
+    "cdDigitCurrentAcount": "6",
+    "isActive": "S",
+    "domicileGroups": [
+      {
+        "cdCardType": 2,
+        "nmCardType": "Master",
+        "cdSettlementType": 1,
+        "nmSettlementType": "Debito",
+        "cdDomicileGroup": 20,
+        "isActive": "S",
+        "nmDomicileGroup": "POS-Debito"
+      },
+      {
+        "cdCardType": 11,
+        "nmCardType": "Cabal",
+        "cdSettlementType": 2,
+        "nmSettlementType": "Crédito",
+        "cdDomicileGroup": 21,
+        "isActive": "S",
+        "nmDomicileGroup": "POS-Crédito"
+      },
+      {
+        "cdCardType": 2,
+        "nmCardType": "Master",
+        "cdSettlementType": 2,
+        "nmSettlementType": "Crédito",
+        "cdDomicileGroup": 51,
+        "isActive": "N",
+        "nmDomicileGroup": "Lio-Crédito"
+      },
+      {
+        "cdCardType": 7,
+        "nmCardType": "ELO",
+        "cdSettlementType": 1,
+        "nmSettlementType": "Crédito",
+        "cdDomicileGroup": 81,
+        "isActive": "S",
+        "nmDomicileGroup": "Minha Casa-Crédito"
+      }
+    ]
+  }
+]

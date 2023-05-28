@@ -1,0 +1,39 @@
+[
+  {
+    "name":"User 1",
+    "age":35,
+    "email_id":"user1@example.com",
+    "mobile":"07889997897",
+    "pincode":"aerr897"
+  },
+  {
+    "name":"User 2",
+    "age":30,
+    "email_id":"user2@example.com",
+    "mobile":"07888887897",
+    "pincode":"aberg87"
+  },
+  {
+    "name":"User 3",
+    "age":18,
+    "email_id":"user3@example.com",
+    "mobile":"078985587897",
+    "pincode":"abc0987"
+  },
+{
+  "name":"User 4",
+  "age":19,
+  "email_id":"user4@example.com",
+  "mobile":"07894556545",
+  "pincode":"abc0405"
+},
+
+{
+  "name":"User 5",
+  "age":20,
+  "email_id":"user5@example.com",
+  "mobile":"078945565897",
+  "pincode":"abc0487"
+}
+
+]
