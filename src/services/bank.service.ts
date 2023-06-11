@@ -17,6 +17,7 @@ export class BankService {
         cdCurrentAcount: '8245',
         cdDigitCurrentAcount: '1',
         isActive: 'S',
+        isActiveDesc: 'ativo',
         domicileGroups: [
           {
             id:'12987-1',
@@ -26,6 +27,7 @@ export class BankService {
             nmSettlementType: 'Debito',
             cdDomicileGroup: 20,
             isActive: 'S',
+            isActiveDesc: 'ativo',
             nmDomicileGroup: 'POS-Debito'
           },
           {
@@ -36,6 +38,7 @@ export class BankService {
             nmSettlementType: 'Crédito',
             cdDomicileGroup: 21,
             isActive: 'S',
+            isActiveDesc: 'ativo',
             nmDomicileGroup: 'POS-Crédito'
           },
           {
@@ -45,7 +48,9 @@ export class BankService {
             cdSettlementType: 2,
             nmSettlementType: 'Crédito',
             cdDomicileGroup: 51,
-            nmDomicileGroup: 'Lio-Crédito'
+            nmDomicileGroup: 'Lio-Crédito',
+            isActive: 'S',
+            isActiveDesc: 'ativo',
           },
           {
             id:'12987-4',
@@ -55,6 +60,7 @@ export class BankService {
             nmSettlementType: 'Débito',
             cdDomicileGroup: 50,
             isActive: 'N',
+            isActiveDesc: 'inativo',
             nmDomicileGroup: 'Lio-Débito'
           }
         ]
@@ -67,6 +73,7 @@ export class BankService {
         cdCurrentAcount: '9878',
         cdDigitCurrentAcount: '6',
         isActive: 'S',
+        isActiveDesc: 'ativo',
         domicileGroups: [
           {
             id:'9875-1',
@@ -76,6 +83,7 @@ export class BankService {
             nmSettlementType: 'Debito',
             cdDomicileGroup: 20,
             isActive: 'S',
+            isActiveDesc: 'ativo',
             nmDomicileGroup: 'POS-Debito'
           },
           {
@@ -86,6 +94,7 @@ export class BankService {
             nmSettlementType: 'Crédito',
             cdDomicileGroup: 21,
             isActive: 'S',
+            isActiveDesc: 'ativo',
             nmDomicileGroup: 'POS-Crédito'
           },
           {
@@ -96,6 +105,7 @@ export class BankService {
             nmSettlementType: 'Crédito',
             cdDomicileGroup: 51,
             isActive: 'N',
+            isActiveDesc: 'inativo',
             nmDomicileGroup: 'Lio-Crédito'
           },
           {
@@ -106,6 +116,7 @@ export class BankService {
             nmSettlementType: 'Crédito',
             cdDomicileGroup: 81,
             isActive: 'S',
+            isActiveDesc: 'ativo',
             nmDomicileGroup: 'Minha Casa-Crédito'
           }
         ]
@@ -117,6 +128,7 @@ export class BankService {
   }
 
   getBankWithGroups() {
+
     return Promise.resolve(this.getBankWiDomicileGroups().slice(0,10));
   }
 

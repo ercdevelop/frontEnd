@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
+import { TagModule } from 'primeng/tag';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ButtonModule } from 'primeng/button';
     FormsModule,
     ButtonModule,
     HttpClientModule,
-    TableModule
+    TableModule,
+    TagModule
   ],
   providers: [],
   schemas:[CUSTOM_ELEMENTS_SCHEMA ],

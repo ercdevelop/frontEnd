@@ -23,7 +23,7 @@
               <td>{{ bankDmcl.cdCurrentAcount}}</td>
               <td>{{ bankDmcl.cdDigitCurrentAcount}}</td>
               <td>
-                  <p-tag [value]="bankDmcl.isActive" [severity]="getSeverity(bankDmcl.isActive)"></p-tag>
+                  <p-tag [value]="bankDmcl.isActiveDesc" [severity]="getSeverity(bankDmcl.isActive)"></p-tag>
               </td>
           </tr>
       </ng-template>
@@ -47,7 +47,7 @@
                                   <td>{{ bankDmcl.nmSettlementType }}</td>
                                   <td>{{ bankDmcl.nmDomicileGroup }}</td>
                                   <td>
-                                      <p-tag [value]="bankDmcl.isActive" [severity]="getStatusSeverity(bankDmcl.isActive)"></p-tag>
+                                      <p-tag [value]="bankDmcl.isActiveDesc" [severity]="getStatusSeverity(bankDmcl.isActive)"></p-tag>
                                   </td>
                                   <td><p-button type="button" icon="pi pi-plus"></p-button></td>
                               </tr>

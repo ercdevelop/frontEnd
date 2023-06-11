@@ -14,38 +14,13 @@ import { BankService } from 'src/services/bank.service';
 export class AppComponent implements OnInit {
 
   title = 'grid-example01';
-  users = [];
-  banks = [];
-  products: Product[] = [];
   bankDmcls: Bank[] = [];
-  tableKey:any =[];
-  tableValue:any = [];
-  tableKeyBank:any =[];
-  tableValueBank:any =[];
   bankConst = BankTableConst;
   cardConst = CardTableConst;
 
-  array:any =[
-    {
-      Name:"A",
-      Adress:"Add1",
-      Email:"Teste@teste.com"
-    },
-
-    {
-      Name:"B",
-      Adress:"Add2",
-      Email:"Teste@teste02.com"
-    }
-
-  ];
-
 
   constructor(private appservice: AppService,
-             private productService: ProductService,
              private bankService:BankService ){
-
-              this.getData();
 
              }
 
@@ -53,84 +28,36 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.productService.getProductsWithOrdersSmall().then((data) => (this.products = data));
-    this.bankService.getBankWithGroups().then((dataBank)=>(this.bankDmcls =dataBank))
-
-    this.getUsersList();
-    this.getBankList();
-    this.getData();
-    this.getDataBank();
+   this.getDataBankDomicileGroup();
 
   }
 
-  getUsersList(){
+  getDataBankDomicileGroup(){
 
-    this.appservice.getUserList().subscribe(
-      response => this.users = response
-    )
+    this.bankService.getBankWithGroups().then((dataBank)=>(this.bankDmcls =dataBank));
 
   }
 
-  getBankList(){
-
-    this.appservice.getBankList().subscribe (
-      response => this.banks = response
-    )
-   }
-
-
-  getSeverityBank(status: string) {
-    return status === "S" ? 'success' : 'danger';
-  }
-
-  getStatusBankSeverity(status: string) {
-    return status === "S" ? 'success' : 'danger';
-  }
-
-  getData(){
-    this.array.forEach((element:any) => {
-      this.tableKey = Object.keys(element);
-      this.tableValue.push(Object.values(element));
-    });
-
-
-  }
-
-  getDataBank(){
-    this.bankConst.forEach((element:any) => {
-      this.tableKey = Object.keys(element);
-      this.tableValueBank.push(Object.values(element));
-    });
-
-    console.log(this.tableKey);
-    console.log(this.tableValueBank);
-    console.log(this.bankConst);
-
-  }
 
   getSeverity(status: string) {
     switch (status) {
-        case 'INSTOCK':
+      case 'S':
             return 'success';
-        case 'LOWSTOCK':
-            return 'warning';
-        case 'OUTOFSTOCK':
+        case 'N':
             return 'danger';
-            default:
-          return 'teste';
+         default:
+          return 'warning';
     }
 }
 
 getStatusSeverity(status: string){
     switch (status) {
-        case 'PENDING':
-            return 'warning';
-        case 'DELIVERED':
+        case 'S':
             return 'success';
-        case 'CANCELLED':
+        case 'N':
             return 'danger';
          default:
-          return 'teste';
+          return 'warning';
 
     }
  }
