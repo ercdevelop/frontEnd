@@ -8,10 +8,16 @@ import { FormsModule } from '@angular/forms';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
+import { UploadComponent } from './upload/upload.component';
+import { DownloadComponent } from './download/download.component';
+import { GridComponent } from './grid/grid.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UploadComponent,
+    DownloadComponent,
+    GridComponent
   ],
   imports: [
     BrowserModule,
