@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { AppService } from '../app.service';
 import { BankService } from 'src/services/bank.service';
 import { Bank } from 'src/domain/bank';
@@ -16,6 +16,7 @@ export class GridComponent {
   bankDmcls: Bank[] = [];
   bankConst = BankTableConst;
   cardConst = CardTableConst;
+  @Output() eventBank = new EventEmitter<any>();
 
 
   constructor(private appservice: AppService,
@@ -33,7 +34,7 @@ export class GridComponent {
 
   getDataBankDomicileGroup(){
 
-    this.bankService.getBankWithGroups().then((dataBank)=>(this.bankDmcls =dataBank));
+     this.bankService.getBankWithGroups().then((dataBank)=>(this.bankDmcls =dataBank));
 
   }
 
